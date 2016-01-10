@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative "../lib/lottery"
+
+# this is temporary
+case ARGV[0]
+when "powerball"
+	Lottery::Powerball.generate_ticket
+	Lottery::Powerball.show_ticket
+else puts "No lottery type provided"
+end
